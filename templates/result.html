@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>当前状态</title>
+</head>
+<body>
+   
+    <div>
+        {% if safe %}
+        <p>姓名：{{username}}</p>
+        <p>不限时间出入</p>
+        {% else %}
+        <p>姓名：{{username}}</p>
+        <p>居家隔离</p>
+        {% endif %}
+      </div>
+   
+</body>
+</html>
