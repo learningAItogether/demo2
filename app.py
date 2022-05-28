@@ -9,14 +9,14 @@ from flask import render_template
 #1构建Flask实例 创建服务对象
 app = Flask(__name__)
 
+@app.route("/",methods = ["GET"])
+def userinfo():
+    return render_template("index.html")
 
 #4系统默认开启HTTP Get方法。可以使用methords添加新方法
-@app.route("/", methods = ["GET","POST"])
-def userinfo():
-    if request.method == "GET":
-        return render_template("index.html")
-
-    elif request.method == "POST":
+@app.route("/result", methods = ["POST"])
+def result():
+    if request.method == "POST":
         username = request.form["username"]
         if  username == "":
             return "请填写表单！"
