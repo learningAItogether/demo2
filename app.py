@@ -14,7 +14,7 @@ app = Flask(__name__)
 @app.route("/", methods = ["GET","POST"])
 def userinfo():
     if request.method == "GET":
-        return render_template("userinfo.html")
+        return render_template("index.html")
 
     elif request.method == "POST":
         username = request.form["username"]
