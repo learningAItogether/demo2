@@ -1,0 +1,21 @@
+   [
+        {"rewrites":[
+    {
+        "source": "/api/(.*)",
+        "destination": "/",
+        "permanent": false
+    }]}
+,
+        {"trailingSlash": true}
+,
+{"redirects": [
+    {
+        "source": "/api/",
+        "destination": "/",
+        "permanent": false
+    }]
+}
+]
+
+
+
